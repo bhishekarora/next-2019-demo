@@ -1,14 +1,15 @@
 package main
 
 import (
-	"net/http"
+	"fmt"
+	"time"
 )
 
 func main() {
-	http.HandleFunc("/", helloFunction)
-	http.ListenAndServe(":8080", nil)
+
+	for{
+	fmt.Println("hello")
+	time.Sleep(1* time.Second)
+	}
 }
 
-func helloFunction(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("Hello Next 2019!!!!\n"))
-}
